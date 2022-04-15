@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin&family=Roboto&family=Staatliches&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root { 
+  font-size: 62.5%;
+
+  /* Colors */
+
+  --bg-first: #EFF1FF;
+  --bg-second: #8E9AAF;
+  --bg-faixa:#CBC0D3;
+  --bg-retangulo:#FEEAFA;
+
+  --fc-body: #23053A;
+  --fc-title: #fff;
+  --fc-subtitle: #4A4E69;
+
+  /* Font */
+
+  --ff-body: 'Palanquin', sans-serif;
+  --ff-title:'Staatliches', cursive;
+  --ff-reponsive-body: 'Roboto', sans-serif;
+
+
+}
+
+body { 
+  font-size: 1.6rem;
+  font-family: var(--ff-body);
+  background-color: var(--bg-first);
+}
+
+
+a { 
+  text-decoration: none;
+}
+
+h1, h2 { 
+  font-family: var(--ff-title);
+}
+
+
+
+header { 
+  text-align: center;
+  background-color: var(--bg-second);
+  padding-bottom: 3.5rem;
+}
+header img { 
+  padding: 3.2rem;
+}
+
+header p { 
+  display: none;
+}
+header h1 { 
+  
+  background-color: var(--bg-faixa);
+  padding: .8rem;
+  font-weight: 400 ;
+  font-size: 4rem;
+  color: var(--fc-title) ;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.page { 
+  width: 38.4rem ;
+  margin: 0 auto;
+}
+
+  
+main { 
+  padding: 1.4rem 3.2rem ;
+  display: grid;
+  gap: 3.2rem;
+}
+
+main p { 
+  margin-top: 1.8rem;
+  text-align: center;
+  margin-bottom: 6.3rem;
+  color: var(--fc-body);
+  font-size: 2rem;
+  line-height: 2.5rem;
+
+}
+
+.grid1 {
+  display: grid;
+  gap: 3rem;
+  padding: .3rem;
+}
+
+.grid2 { 
+  display: grid;
+  gap: 3rem;
+  padding: .3rem;
+}
+
+.cut-image { 
+  height: 25rem;
+  object-fit: cover;
+}
+.img-ice { 
+  position: relative;
+  
+}
+
+
+.img-ice img { 
+  
+  width: 100%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 2rem;
+  animation: toTop 1s;
+  
+  
+
+}
+
+.img-ice h2 { 
+  position: absolute;
+  top: 2.7rem;
+  right: 2.8rem;
+  background-color: var(--bg-retangulo);
+  padding: .5rem 2rem;
+  color: var(--fc-subtitle);
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+  border-radius: 2rem;
+
+  animation: toDown 1s 300ms backwards;
+}
+
+footer { 
+  display: none;
+}
+
+@media (min-width:700px){ 
+  body { 
+    display: flex;
+  }
+  .page { 
+    width: 100rem;
+  }
+
+  header { 
+    width:  43rem;
+    height: 100vh;
+  }
+
+  header img { 
+    width: 38rem;
+  }
+
+  header h1 { 
+    font-size: 5.5rem;
+    padding: 2rem;
+  }
+
+  header p { 
+    display: inline-block;
+    color: var(--fc-title);
+    text-align: center;
+    padding: 5.2rem 4.5rem 12.5rem 5.4rem;
+  }
+
+  main { 
+    margin-top: 6.4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+  }
+
+  main h2 { 
+    display: none;
+  }
+  main p { 
+    display: none;
+  }
+
+  .grid1 {
+    display: grid;
+    gap: 1rem;
+    padding: .3rem;
+  }
+
+  .grid2 { 
+    display: grid;
+    gap: 5rem;
+    padding: .3rem;
+  }
+ 
+ 
+.test {
+  height: 436px;
+  }
+
+  footer { 
+    display: inline-block;
+    position: absolute;
+    bottom: 4%;
+    
+    left: 54%;
+  }
+
+  footer p { 
+    font-family: var(--ff-reponsive-body);
+    font-size: 14px;
+  line-height: 28px;
+
+
+  text-align: center;
+
+  color: #4A4E69;
+  }
+
+  footer p a { 
+    color: #4A4E69;
+    font-weight: bold;
+  }
+
+}
+
+@keyframes toTop { 
+  0% { 
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  100% { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toDown { 
+  0% { 
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  100% { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
